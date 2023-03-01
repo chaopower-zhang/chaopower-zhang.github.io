@@ -20,31 +20,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="python, shell, R, perl, java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chaopower&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="samtools 常用命令1.软件介绍及安装Samtools 用于处理sam与bam格式的工具软件，能够实现二进制查看、格式转换排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总，同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。 123456789101112131415#获取压缩包并解压wgethttps:&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生信软件-samtools">
+<meta property="og:url" content="http://example.com/2023/03/01/samtools%20%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Chaopower&#39;s Blog">
-<meta property="og:description" content="python, shell, R, perl, java">
+<meta property="og:description" content="samtools 常用命令1.软件介绍及安装Samtools 用于处理sam与bam格式的工具软件，能够实现二进制查看、格式转换排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总，同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。 123456789101112131415#获取压缩包并解压wgethttps:&#x2F;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-01T13:02:58.000Z">
+<meta property="article:modified_time" content="2023-03-01T11:10:14.906Z">
 <meta property="article:author" content="Chao Zhang">
-<meta property="article:tag" content="生物信息学">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/03/01/samtools%20%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Chaopower's Blog</title>
+  <title>生信软件-samtools | Chaopower's Blog</title>
   
 
 
@@ -155,9 +157,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -173,10 +176,9 @@
       <meta itemprop="name" content="Chaopower's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/01/samtools%20%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">生信软件-samtools</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          生信软件-samtools
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -209,7 +211,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="samtools-常用命令"><a href="#samtools-常用命令" class="headerlink" title="samtools 常用命令"></a>samtools 常用命令</h1><h2 id="1-软件介绍及安装"><a href="#1-软件介绍及安装" class="headerlink" title="1.软件介绍及安装"></a>1.软件介绍及安装</h2><p>Samtools 用于处理sam与bam格式的工具软件，能够实现二进制查看、格式转换排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总，同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。</p>
+        <h1 id="samtools-常用命令"><a href="#samtools-常用命令" class="headerlink" title="samtools 常用命令"></a>samtools 常用命令</h1><h2 id="1-软件介绍及安装"><a href="#1-软件介绍及安装" class="headerlink" title="1.软件介绍及安装"></a>1.软件介绍及安装</h2><p>Samtools 用于处理sam与bam格式的工具软件，能够实现二进制查看、格式转换排序及合并等功能，结合sam格式中的flag、tag等信息，还可以完成比对结果的统计汇总，同时利用linux中的grep、awk等操作命令，还可以大大扩展samtools的使用范围与功能。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取压缩包并解压</span></span><br><span class="line">wget</span><br><span class="line">https://github.com/samtools/samtools/releases/download/1.9/samtools</span><br><span class="line">1.9.tar.bz2</span><br><span class="line">tar -xzvf samtools-1.9.tar .bz2</span><br><span class="line"><span class="comment">#进入samtools文件夹</span></span><br><span class="line"><span class="built_in">cd</span> samtools-1.9</span><br><span class="line"><span class="comment">#安装</span></span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment">##非root安装</span></span><br><span class="line"><span class="comment">#./configure --prefix=/home/用户名/.Local</span></span><br><span class="line"><span class="comment">#make</span></span><br><span class="line"><span class="comment">#make install</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="2-Samtools-基本命令"><a href="#2-Samtools-基本命令" class="headerlink" title="2.Samtools 基本命令"></a>2.Samtools 基本命令</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">$ samtools --<span class="built_in">help</span></span><br><span class="line"></span><br><span class="line">Program: samtools (Tools <span class="keyword">for</span> alignments <span class="keyword">in</span> the SAM format)</span><br><span class="line">Version: 1.3.1 (using htslib 1.3.1)</span><br><span class="line"></span><br><span class="line">Usage:   samtools &lt;<span class="built_in">command</span>&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  -- Indexing</span><br><span class="line">     dict           create a sequence dictionary file</span><br><span class="line">     faidx          index/extract FASTA</span><br><span class="line">     index          index alignment</span><br><span class="line"></span><br><span class="line">  -- Editing</span><br><span class="line">     calmd          recalculate MD/NM tags and <span class="string">&#x27;=&#x27;</span> bases</span><br><span class="line">     fixmate        fix mate information</span><br><span class="line">     reheader       replace BAM header</span><br><span class="line">     rmdup          remove PCR duplicates</span><br><span class="line">     targetcut      <span class="built_in">cut</span> fosmid regions (<span class="keyword">for</span> fosmid pool only)</span><br><span class="line">     addreplacerg   adds or replaces RG tags</span><br><span class="line"></span><br><span class="line">  -- File operations</span><br><span class="line">     collate        shuffle and group alignments by name</span><br><span class="line">     <span class="built_in">cat</span>            concatenate BAMs</span><br><span class="line">     merge          merge sorted alignments</span><br><span class="line">     mpileup        multi-way pileup</span><br><span class="line">     <span class="built_in">sort</span>           <span class="built_in">sort</span> alignment file</span><br><span class="line">     <span class="built_in">split</span>          splits a file by <span class="built_in">read</span> group</span><br><span class="line">     quickcheck     quickly check <span class="keyword">if</span> SAM/BAM/CRAM file appears intact</span><br><span class="line">     fastq          converts a BAM to a FASTQ</span><br><span class="line">     fasta          converts a BAM to a FASTA</span><br><span class="line"></span><br><span class="line">  -- Statistics</span><br><span class="line">     bedcov         <span class="built_in">read</span> depth per BED region</span><br><span class="line">     depth          compute the depth</span><br><span class="line">     flagstat       simple stats</span><br><span class="line">     idxstats       BAM index stats</span><br><span class="line">     phase          phase heterozygotes</span><br><span class="line">     stats          generate stats (former bamcheck)</span><br><span class="line"></span><br><span class="line">  -- Viewing</span><br><span class="line">     flags          explain BAM flags</span><br><span class="line">     tview          text alignment viewer</span><br><span class="line">     view           SAM&lt;-&gt;BAM&lt;-&gt;CRAM conversion</span><br><span class="line">     depad          convert padded BAM to unpadded BAM</span><br></pre></td></tr></table></figure>
@@ -563,339 +565,43 @@
 
 <p>call SNP和INDEL等变异信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ samtools mpileup -f genome.fasta abc.bam &gt; abc.txt</span><br><span class="line">$ samtools mpileup -gSDf genome.fasta abc.bam &gt; abc.bcf</span><br><span class="line">$ samtools mpileup -guSDf genome.fasta abc.bam | \</span><br><span class="line">           bcftools view -cvNg - &gt; abc.vcf</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/27/%E8%82%BF%E7%98%A4%E6%A3%80%E6%B5%8B-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Chao Zhang">
-      <meta itemprop="description" content="python, shell, R, perl, java">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chaopower's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/27/%E8%82%BF%E7%98%A4%E6%A3%80%E6%B5%8B-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">肿瘤检测-基础概念</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-02-27 21:02:58 / 修改时间：21:14:19" itemprop="dateCreated datePublished" datetime="2023-02-27T21:02:58+08:00">2023-02-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%81%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">流程</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%81%E7%A8%8B/%E8%82%BF%E7%98%A4%E6%A3%80%E6%B5%8B/" itemprop="url" rel="index"><span itemprop="name">肿瘤检测</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-概念汇总"><a href="#1-概念汇总" class="headerlink" title="1. 概念汇总"></a>1. 概念汇总</h1><h2 id="1-1-参考基因"><a href="#1-1-参考基因" class="headerlink" title="1.1 参考基因"></a>1.1 参考基因</h2><p>ucsc.hg19.fasta 人类基因组参考序列，最新版本是hg38，但因hg19版本配套的数据库和软件支持较全，所以临床较多使用hg19版本。</p>
-<p>hg19_refGene.txt NCBI的基因参考序列数据库，提供基因的位置信息和基本的功能单元如外显子(exon)、内含子(intron)、非编码区(UTR)等的位置信息。</p>
-<p>hg19_cytoBand.txt cytogenetic band 的简称，是每个细胞间细胞发生带(cytogenetic band )的染色体坐标信息。</p>
-<p>1000g 千人基因组计划，包含世界几个族群的等位基因组频率，包含汉族和东亚族群的等位基因频率。</p>
-<p>hg19_esp6500siv2_all.txt ESP全称是NHLBI GO(National Heart.Lung.and Blood Institule Grand Opportunity) Exome Sequencing Project（美国国家心肺和血液研究所外显子组测序计划），包含了SNP和InDel变异。目前有6503个样本，分别来源于非裔美国人2203人，欧裔美国人4300人。</p>
-<p> hg19_exac03.txt 版本：03ExAC全称是The Exome Aggregation Consortium（外显子组整合数据库），整合了6万多个无亲缘关系个体的数据，这些个体来源于大量疾病研究和群体遗传学研究，能够用做严重疾病研究的参考数据库，目前EXAC数据库中包括ALL, AFR(African)，,AMR(Admixed American), EAS(East Asian), FIN(Finnish), NFE(Non-finnish European)， OTH(other)， SAS(South Asian)。该数据库旨在汇总和协调各种大规模测序项目的外显子组测序数据，通过ExAC的注释，可以了解该变异位点上突变碱基的等位基因频率，并可采用0.01的标准进行过滤，与千人基因组项目一样，有的公司会根据不同目标研究人种单独对某个子数据库进行分析，例如研究中国人，会另外在东亚EAS数据库中注释突变频率。</p>
-<h2 id="1-2-数据库介绍"><a href="#1-2-数据库介绍" class="headerlink" title="1.2 数据库介绍"></a>1.2 数据库介绍</h2><p>hg19_cosmic70.txt 全称是Catalogue of Somatic Mutation in Cancer，是世界上研究人体肿瘤体细胞突变最大和最全面的数据库，癌症相关的体细胞位点，是整个网站的核心。</p>
-<p>hg19_clinvar_20210724.txt 注释变异与人类疾病之间的关系，临床意义的数据来源于NCBI，Clinvar整合了dbSNP、dbVar、Pubmed、OMIM等多个数据库在遗传变异和临床表型方面的数据信息，形成一个标准的、可信的遗传变异-临床相关的数据库。</p>
-<p>hg19_intervar_20180118.txt 评价错义突变有害性的数据库，评价结果可分为Pathogenic（有害）、 Likely pathogenic（可能有害）、Benign（无害）、Likely benign（可能无害）、Uncertain significance（有害性不明确）几种。</p>
-<p>hg19_dbnsfp35a.txt 用于基因突变的致病性预测。</p>
-<p>avsnp 用于注释变异的rs号。</p>
-<p>private_databases 整理后的oncoKB、pharmGKB、clinicaltrials等，包括靶向用药信息，化疗用药信息，遗传风险数据库信息等，为了便于版本管理，以目录结构为统一数据库名称private_databases。</p>
-<h2 id="1-3-其他常规文件"><a href="#1-3-其他常规文件" class="headerlink" title="1.3 其他常规文件"></a>1.3 其他常规文件</h2><p>bed文件</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/27/%E8%82%BF%E7%98%A4%E6%A3%80%E6%B5%8B-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/" rel="prev" title="肿瘤检测-基础概念">
+      <i class="fa fa-chevron-left"></i> 肿瘤检测-基础概念
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/26/%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Chao Zhang">
-      <meta itemprop="description" content="python, shell, R, perl, java">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chaopower's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/26/%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E9%87%8F/" class="post-title-link" itemprop="url">生物统计理论</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-26 20:22:39" itemprop="dateCreated datePublished" datetime="2023-02-26T20:22:39+08:00">2023-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-27 21:25:09" itemprop="dateModified" datetime="2023-02-27T21:25:09+08:00">2023-02-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">统计学</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E6%8F%8F%E8%BF%B0%E6%80%A7%E7%BB%9F%E8%AE%A1%E9%87%8F/" itemprop="url" rel="index"><span itemprop="name">描述性统计量</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-描述性统计量"><a href="#1-描述性统计量" class="headerlink" title="1. 描述性统计量"></a>1. 描述性统计量</h2><p>（来源生信技能树）</p>
-<p>为了解决某个问题，我们通常会观察一组和该问题相关的样本，利用总体中的部分样本来推断总体的情况进而得到相关结论。在通过样本推断总体前，首先需用对已有样本数据进行简单的评估和描述，针对这一需求也就引出了描述统计量这一概念。进行描述性统计时，我们最关注数据两个层面的问题：数据的集中趋势和变异分散性。</p>
-<h3 id="1-1-数据的集中趋势"><a href="#1-1-数据的集中趋势" class="headerlink" title="1.1 数据的集中趋势"></a>1.1 数据的集中趋势</h3><p>均值：所有观察值的和除以观察的个数。算数平均是最自然和常用的测度，其问题在于对异常值(outliers)非常敏感。有极端值存在时，均值不能代表样本的绝大多数情况。</p>
-<p>中位数：所谓中位数，是指所有样本观测值由小到大排序，位于中间的一个（样本数为奇数）或者两个数据的平均值（样本数为偶数）。</p>
-<p>当数据分布对称时，中位数近似等于算数平均数；当数据正倾斜时（图像向右倾斜），中位数小于算数平均数；当数据负倾斜时（图像向左倾斜），中位数大于算数平均数。因此，我们可以通过比较样本的均值和中位数对数据的分布对称性进行初判断。</p>
-<p>众数：在样本所有观测值中，出现频率最大（出现次数最多）的数值称为众数。这里需要说明，当数据量很大而且数值不会多次重复出现时众数并不能带来太多信息。比如当计算上万个基因的表达量后，得到的众数最可能是0，因为每个基因的表达值或多或少都有一些不同，这时候出现最多的就是那些没有检测到表达基因的0了。但是在遇到类别数据而非数值型数据时众数有很大用处，或者说众数是唯一可以用于类别数据的平均数。</p>
-<p>在R中，均值和中位数可以通过mean()和median()进行计算,而众数可以通过modeest包mfv()函数得到。</p>
-<h3 id="1-2-数据的变异性（离散性）"><a href="#1-2-数据的变异性（离散性）" class="headerlink" title="1.2 数据的变异性（离散性）"></a>1.2 数据的变异性（离散性）</h3><p>平均数显然不能说明一切问题，在说明样本数据时我们还必须考虑数据是不是过于分散。例如在篮球队员投篮平均得分相同的情况下，更重要的是知道他们谁发挥更加稳定。</p>
-<p>极差(range)指一个样本中最大值和最小值之间的差值。在统计学中也称为全距，它能够指出数据的“宽度”（范围）。但它和均值一样易受极端值影响，而且也会受样本量明显影响。</p>
-<p>针对极差的缺点，统计学又引入分位数(quantiles)概念，通俗讲是把数据的“宽度”细分后再去进行比较从而更好地描述数据的分布形态。分位数用三个点将从小到大排列好的数据分为四个相等部分，而这三个点也就是我们常说的四分位数，分别叫做下四分位数，中位数和上四分位数。当然，除了四分位也可以计算十分位或者百分位。</p>
-<p>分位数的引进能够说明数值的位置，但无法说明某数值在该位置出现的概率。为了说明数据的稳定程度，我们可以考虑计算每个数据值到平均数的距离（此处可以脑补一个高瘦形的数据曲线和矮胖形的数据曲线），但样本中所有观测值与均值偏差的和永远是0。为了解决这种正负距离相互抵消的问题，统计学又引入方差(variance)和标准差(standard deviation)概念。</p>
-<p>所谓方差指数值与均值距离平方数的平均数，而标准差，则是方差的平方根。标准差体现了数据的变异度，标准差越小，数值和均值越近。通常均值用μ表示，而标准差用σ表示。</p>
-<p>在R中，可以通过quantile()计算分位数，通过var()来计算方差，通过sd()来计算标准差。</p>
-<p>有了标准差的概念，随之而来的问题是当两个样本标准差相同但是均值相差很大时该如何做出区分。于是，统计学引入了变异系数(coefficient of variation, CV) 概念，变异系数是指样本标准差除以均值再乘100%。变异系数不会受数据尺度的影响，因此常用来进行不同样本之间变异性的比较。</p>
-<p>在实际的数据分析中，如果要比较不同数据集(均值和标准差都不同)之间的数值，通常会引入z score的概念，z score 的计算方法是用某一数值减去均值在除以标准差。通过对原始数据进行z变换，我们将不同数据集转化为一个新的均值为0，标准差为1的分布。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/25/%E6%A6%82%E7%8E%87%E7%9B%B8%E5%85%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Chao Zhang">
-      <meta itemprop="description" content="python, shell, R, perl, java">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chaopower's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/25/%E6%A6%82%E7%8E%87%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">概率相关</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-25 20:49:51" itemprop="dateCreated datePublished" datetime="2023-02-25T20:49:51+08:00">2023-02-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-27 21:25:09" itemprop="dateModified" datetime="2023-02-27T21:25:09+08:00">2023-02-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">统计学</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/%E6%A6%82%E7%8E%87%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">概率相关</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p>样本空间(sample space)是所有可能结果的一个集合，事件(event)则是样本空间中所有感兴趣结果的一个子集。某事件的概率(probability)是该事件在无限次试验次数中的相对频率。</p>
-<p>事件的交集并集和补集，概率的加法法则和乘法法则在本章中不再做介绍。</p>
-<p>条件概率(Conditional Probability)用来描述与其他事件的发生相关的某事件的概率，通常被描述成“在A事件下发生事件B的概率”。在书写时用|表示，例如P(A|B)是在B发生的情况下A发生的概率。计算方式为AB同时发生的次数除以所有B发生的次数。</p>
-<p>条件概率计算方法：</p>
-<p><em>P</em>(<em>A</em>∣<em>B</em>)&#x3D;<em>P</em>(<em>A</em>∩<em>B</em>)&#x2F;<em>P</em>(<em>B</em>)</p>
-<p>可推出: </p>
-<p><em>P</em>(<em>B</em>∣<em>A</em>)&#x3D;<em>P</em>(<em>A</em>∩<em>B</em>)&#x2F;<em>P</em>(<em>A</em>) &#x3D;&gt; <em>P</em>(<em>A</em>∩<em>B</em>)&#x3D;<em>P</em>(<em>A</em>)×<em>P</em>(<em>B</em>∣<em>A</em>)</p>
-<p>全概率公式：</p>
-<p><em>P</em>(<em>B</em>)&#x3D;<em>P</em>(<em>A</em>)×<em>P</em>(<em>B</em>∣<em>A</em>)+<em>P</em>(<em>A</em>′)×<em>P</em>(<em>B</em>∣<em>A</em>′)</p>
-<p> （贝叶斯定理分母部分）</p>
-<p>贝叶斯定理：</p>
-<p><em>P</em>(<em>A</em>∣<em>B</em>)&#x3D;<em>P</em>(<em>A</em>)×<em>P</em>(<em>B</em>∣<em>A</em>)+<em>P</em>(<em>A</em>′)×<em>P</em>(<em>B</em>∣<em>A</em>′)<em>P</em>(<em>A</em>)×<em>P</em>(<em>B</em>&#x2F;<em>A</em>)</p>
-<p>得到的贝叶斯定理可以帮助我们计算逆条件概率。</p>
-<p>在实际的生物学数据处理的过程中，我们还会接触到灵敏度(sensitivity)、特异度(specificity)、假阳性(false  positive)和假阴性(false negative) 几个概念。在疾病相关研究中，对于某一个症状，灵敏度指发病后出现症状的概率，特异度是不发病时不出现症状的概率。假阳性是指实验结果阳性但是实际为阴性，假阴性是指实验结果为阴性但是实际为阳性。基于灵敏度和特异度可以使用ROC曲线，通常来说在两个检验中，曲线下面积大的较好。</p>
-<p>概率能够告诉我们事件发生的可能性，但如果想要利用概率预测未来的结果并且评估预测的确定性就需要引入概率分布。</p>
-<h3 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h3><p>随机变量： 样本空间中，对不同事件指定有相应概率的数值函数。</p>
-<p>随机变量是可以等于一系列数值的 变量，这些值都和一个特定概率关联。它的写法是<em>P</em>(<em>X</em>&#x3D;<em>x</em>)，表示随机变量X取特定值为x时的概率。随机变量包括离散和连续两种形式，所谓离散指变量只能取一些确定值。连续指的是有无限多种可能取值。</p>
-<p>概率分布 也叫概率质量分布，</p>
-<p><em>P</em>(<em>X</em>&#x3D;<em>x</em>)。在描述统计量中，样本的频数分布描述每个取值及对应发生次数，如果样本总数除以对应发生次数，得到的频率分布就类似于这里的概率分布。后面会提到的“拟合优度检验”就是比较有限样本频率分布和概率分布的差异。</p>
-<p>如果将随机变量和样本对应起来理解，样本中均值的概念在总体（随机变量）中称为</p>
-<p>期望，也叫作总体均值，表示为<em>μ</em>（和均值一致）或者E*(<em>X</em>)。计算方式是将每个可能值和概率相乘再把所有乘积相加。和均值类似，这里的期望也无法描述相关数值分散程度。</p>
-<p>同样，在随机变量中也有类似于样本方差的概念，称为</p>
-<p>总体方差（随机变量方差），用来表示分散程度。其计算公式为 </p>
-<p><em>Va**r</em>(<em>X</em>)&#x3D;<em>E</em>(<em>X</em>−<em>μ</em>)2。而概率分布的标准差<em>σ</em>同样是方差的平方根。</p>
-<p>计算<em>E</em>(<em>X</em>−<em>μ</em>)2时，首先计算每个数值x的(<em>x</em>−<em>μ</em>)2,然后再将结果乘以概率，最后把所有结果相加。</p>
-<p>在数据集中，方差和标准差表示的是数据和均值的距离，在概率分布中表示特定数值概率的分散情况。方差越小，结果越接近期望。</p>
-<p>累加分布函数(cumulative-distribution function, cdf): 随机变量X，对于X的任一指定值x，概率值</p>
-<p><em>P</em>(<em>X</em>≤<em>x</em>)。即随机变量取值不大于指定值的概率。记作<em>F</em>(<em>x</em>)</p>
-<p> 常见的离散概率分布 </p>
-<p>几何分布：进行一组相互独立实验，每次实验有成功失败两种可能且每次试验概率相等，想知道第一次成功需要进行的试验次数。</p>
-<p><em>P</em>(<em>X</em>&#x3D;<em>r</em>)&#x3D;<em>p<strong>q</strong>r</em>−1</p>
-<p><em>P</em>(<em>X</em>&gt;<em>r</em>)&#x3D;<em>q**r</em></p>
-<p><em>P</em>(<em>X</em>≤<em>r</em>)&#x3D;1−<em>q**r</em></p>
-<p>期望<em>E</em>(<em>X</em>)&#x3D;<em>x</em>1；</p>
-<p>方差 <em>Va**r</em>(<em>X</em>)&#x3D;<em>p</em>2<em>q</em></p>
-<p>二项分布：进行一组相互独立试验，每次实验有成功失败两种可能，每次试验概率相等且试验次数有限，想知道在有限次试验中成功的次数。</p>
-<p><em>P</em>(<em>X</em>&#x3D;<em>r</em>)&#x3D;<em>C<strong>n</strong>r<strong>p</strong>r<strong>q</strong>n</em>−<em>r</em></p>
-<p>期望<em>E</em>(<em>X</em>)&#x3D;<em>n**p</em>；方差<em>Va**r</em>(<em>X</em>)&#x3D;<em>n**pq</em></p>
-<p>二项分布和几何分布差别在于，前者试验次数固定求成功概率，后者求第一次成功前试验次数。</p>
-<p>泊松分布</p>
-<p>：常与稀有事件相关，单独事件在给定区间（区间可以是时间或者空间）内随机独立发生，该区间内的事件平均发生次数已知且为有限值。这个值用<em>λ</em>表示。给定区间内发生r次事件的概率计算公式：</p>
-<p><em>P</em>(<em>X</em>&#x3D;<em>r</em>)&#x3D;<em>r</em>!<em>e</em>−<em>λ<strong>λ</strong>r</em></p>
-<p>期望是给定区间内能够期望的事件发生次数λ，方差也是λ。如果一个离散随机变量的一批数据计算后方差和均值近似相等，则可以推测样本符合泊松分布。当二项分布的p很小且n非常大时，<em>n**pq</em>≈<em>n**p</em></p>
-<p>,方差和期望近似相等，可以用泊松分布来近似二项分布，从而使计算简化。通常，n大于50且p&lt;0.1时为典型的近似情况。</p>
-<p> 连续概率分布 </p>
-<p>当数据连续分布，人们关心的是取得某一个特定范围的概率。</p>
-<p>概率密度函数(probability density function, pdf):本质是一个函数，用这个函数可以求出在一个范围内某连续变量的概率，同时该函数可以指出该概率分布的形状。换句话讲，任意a,b两点之间及函数对应曲线下组成的面积等于随机变量X落在ab间的概率。曲线下面积总和是1。</p>
-<p>概率密度可以指出各种范围内的概率大小，用面积来表示。概率密度只是表示概率的一种方法而非概率本身。</p>
-<p>累加分布函数</p>
-<p>a点上的值等于随机变量X取值≤<em>a</em>的概率，也是概率密度函数a左边曲线下的面积。</p>
-<p>正态分布</p>
-<p>是连续数据的一种理想状态。正态分布的概率密度函数是一条对称的钟形曲线，均值具有最大的概率密度，偏离均值概率密度逐渐变小。参数<em>μ</em>是均值，也是曲线的中央位置，<em>σ</em>表述曲线的“胖瘦”。</p>
-<p>连续随机变量X符合均值为<em>μ</em>，标准差为<em>σ</em>的正态分布时写作<em>X</em>∼<em>N</em>(<em>μ</em>,<em>σ</em>2).</p>
-<p>线性变换</p>
-<p><em>a**X</em>+<em>b</em>∼<em>N</em>(<em>a**μ</em>+<em>b</em>,<em>a</em>2<em>σ</em>2)</p>
-<p>当X和Y相互独立（彼此之间没有影响）时：</p>
-<p><em>X</em>+<em>Y</em>∼<em>N</em>(<em>μ**x</em>+<em>μ**y</em>,<em>σ**x</em>2+<em>σ**y</em>2)</p>
-<p><em>X</em>−<em>Y</em>∼<em>N</em>(<em>μ**x</em>−<em>μ**y</em>,<em>σ**x</em>2+<em>σ**y</em>2)</p>
-<p>期望</p>
-<p><em>E</em>(<em>X</em>1+<em>X</em>2+…+<em>X**n</em>)&#x3D;<em>n**E</em>(<em>X</em>)</p>
-<p>；方差<em>Va**r</em>(<em>X</em>1+<em>X</em>2+…+<em>X**n</em>)&#x3D;<em>nVa**r</em>(<em>X</em>)</p>
-<p>当X和Y并不彼此独立时，使用协方差(Covariance)来描述两个随机变量间的关系，记做Cov(X,Y)</p>
-<p><em>C<strong>o</strong>v</em>(<em>X</em>,<em>Y</em>)&#x3D;<em>E</em>[(<em>X</em>−<em>μ**x</em>)(<em>Y</em>−<em>μ**y</em>)]二项分布正态近似</p>
-<p>：通常情况，当二项分布满足</p>
-<p><em>n**p</em>≥5 (也有建议<em>n**pq</em>≥5)时，可以用正态分布代替二项分布。其中<em>μ</em>&#x3D;<em>n**p</em>,<em>σ</em>2&#x3D;<em>n**pq</em>。另外，当泊松分布的λ&gt;15时，也可以用正态分布进行近似。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -948,6 +654,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#samtools-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">samtools 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">1.软件介绍及安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Samtools-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">1.2.</span> <span class="nav-text">2.Samtools 基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%9E%84%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 构建索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-dict"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">2.1.1 dict</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-faidx"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2.1.2  faidx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-index"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">2.1.3 index</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91-Editing"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 文件编辑(Editing)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#calmd"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">calmd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fixmate"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">fixmate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reheader"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">reheader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rmdup"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">rmdup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#targetcut"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">targetcut</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addreplacerg"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">addreplacerg</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86-File-operations"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 文件处理(File operations)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#collate"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">collate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#merge"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">merge</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mpileup"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">mpileup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort"><span class="nav-number">1.2.3.5.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#split"><span class="nav-number">1.2.3.6.</span> <span class="nav-text">split</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#quickcheck"><span class="nav-number">1.2.3.7.</span> <span class="nav-text">quickcheck</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fastq"><span class="nav-number">1.2.3.8.</span> <span class="nav-text">fastq</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fasta"><span class="nav-number">1.2.3.9.</span> <span class="nav-text">fasta</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1-Statistics"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 数据统计(Statistics)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bedcov"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">bedcov</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#depth"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">depth</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flagstat"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">flagstat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#idxstats"><span class="nav-number">1.2.4.4.</span> <span class="nav-text">idxstats</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#phase"><span class="nav-number">1.2.4.5.</span> <span class="nav-text">phase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stats"><span class="nav-number">1.2.4.6.</span> <span class="nav-text">stats</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E5%8F%AF%E8%A7%86%E5%8C%96-Viewing"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 可视化(Viewing)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flags"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">flags</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tview"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">tview</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#view"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#depad"><span class="nav-number">1.2.5.4.</span> <span class="nav-text">depad</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-%E5%B8%B8%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 常用示例</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
