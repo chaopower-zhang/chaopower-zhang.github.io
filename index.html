@@ -186,7 +186,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2023-03-02 21:19:08 / 修改时间：21:37:06" itemprop="dateCreated datePublished" datetime="2023-03-02T21:19:08+08:00">2023-03-02</time>
+              <time title="创建时间：2023-03-02 21:19:08 / 修改时间：21:53:13" itemprop="dateCreated datePublished" datetime="2023-03-02T21:19:08+08:00">2023-03-02</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,9 +211,9 @@
       
           <p>SAM(Sequence Alignment&#x2F;Map)格式是一种通用的比对格式，用来存储reads与参考序列的比对信息。SAM是一种序列比对格式标准，由sanger制定，是以TAB为分割符的文本格式。主要应用于测序序列mapping到基因组上的结果表示。 SAM分为两部分，注释信息（header section）和比对结果部分（alignment section）。</p>
 <h5 id="1-注释信息"><a href="#1-注释信息" class="headerlink" title="1.注释信息"></a>1.注释信息</h5><p>header内容不多，也不会太复杂，每一行都用‘@’ 符号开头，里面主要包含了版本信息，序列比对的参考序列信息，如果是标准工具（bwa，bowtie，picard）生成的SAM，一般还会包含生成该份文件的参数信息（如下图），@PG标签开头的那些。</p>
-<p><img src="/sam-bam%E6%96%87%E4%BB%B6/image-20230302212240356.png" alt="image-20230302212240356"></p>
+<p><img src="/2023/03/02/sam-bam%E6%96%87%E4%BB%B6/image-20230302212240356.png" alt="image-20230302212240356"></p>
 <h5 id="2-比对信息"><a href="#2-比对信息" class="headerlink" title="2. 比对信息"></a>2. 比对信息</h5><p>这是我们通常所说的序列比对内容，每一行都是一条read比对信息，所有列都以TAB分隔，它的记录看起来是这样的：</p>
-<p><img src="/sam-bam%E6%96%87%E4%BB%B6/image-20230302213359578.png" alt="image-20230302213359578"></p>
+<p><img src="/2023/03/02/sam-bam%E6%96%87%E4%BB%B6/image-20230302213359578.png" alt="image-20230302213359578"></p>
 <p>下面我们就来仔细瞧瞧这里的每一个信息分别都是什么。</p>
 <p>以下是相关信息的具体说明：</p>
 <ul>
@@ -221,12 +221,12 @@
 <p>这是一个非常特别并且重要的数字，也是一个容易被忽视的数字，它里面实际上记录了许多有关read比对情况的信息。想要读懂它的一个关键点是我们不能够将其视为一个数字，而是必须将其转换为一串由0和1组成的二进制码，这一串二进制数中的每一个位(注意是“位”，bit的意思)都代表了一个特定信息，它一共有12位（以前只有8位），所以一般会用一个16位的整数来代表，这个整数的值就是12个0和1的组合计算得来的，因此它的数值范围是0~2048（2的12次方），如下表：</p>
 </li>
 </ul>
-<p><img src="/sam-bam%E6%96%87%E4%BB%B6/image-20230302213545662.png" alt="image-20230302213545662"></p>
+<p><img src="/2023/03/02/sam-bam%E6%96%87%E4%BB%B6/image-20230302213545662.png" alt="image-20230302213545662"></p>
 <p>以下是相关信息的具体说明：</p>
 <ul>
 <li><p>flag信息</p>
 <p>这是一个非常特别并且重要的数字，也是一个容易被忽视的数字，它里面实际上记录了许多有关read比对情况的信息。想要读懂它的一个关键点是我们不能够将其视为一个数字，而是必须将其转换为一串由0和1组成的二进制码，这一串二进制数中的每一个位(注意是“位”，bit的意思)都代表了一个特定信息，它一共有12位（以前只有8位），所以一般会用一个16位的整数来代表，这个整数的值就是12个0和1的组合计算得来的，因此它的数值范围是0~2048（2的12次方），如下表：</p>
-<p><img src="/sam-bam%E6%96%87%E4%BB%B6/image-20230302213625278.png" alt="image-20230302213625278"></p>
+<p><img src="/2023/03/02/sam-bam%E6%96%87%E4%BB%B6/image-20230302213625278.png" alt="image-20230302213625278"></p>
 <p>所以，通过上面这个表的信息，我们就可以清楚地知道每一个FLAG中都包含了什么信息。比如看到FLAG &#x3D; 77时，我们第一步要做的就是将其分解为二进制序列（也可以理解为分解成若干个2的n次方之和）：</p>
 <p>77 &#x3D; 000001001101 &#x3D; 1 + 4 + 8 +64，这样就得到了这个FLAG包含的意思：PE read，read比对不上参考序列，它的配对read也同样比不上参考序列，它是read1。</p>
 <p>此处提供一个在线换算flag值的网站：<a target="_blank" rel="noopener" href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a></p>
